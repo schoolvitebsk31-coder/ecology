@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="286.27917mm"
+   height="182.13326mm"
+   viewBox="0 0 286.27917 182.13326"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="option.svg"
+   inkscape:export-filename="door.svg"
+   inkscape:export-xdpi="47.477428"
+   inkscape:export-ydpi="47.477428"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.75811588"
+     inkscape:cx="397.03693"
+     inkscape:cy="558.62172"
+     inkscape:window-width="1920"
+     inkscape:window-height="1111"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showborder="true"
+     inkscape:export-bgcolor="#ffffff00">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="286.27917"
+       height="182.13326"
+       id="page37"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <color-profile
+       name="ASUS_DCIP3"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/ASUS_DCIP3.icm"
+       id="color-profile2" />
+    <color-profile
+       name="ASUS_DisplayP3"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/ASUS_DisplayP3.icm"
+       id="color-profile3" />
+    <color-profile
+       name="ASUS_sRGB"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/ASUS_sRGB.icm"
+       id="color-profile4" />
+    <color-profile
+       name="ASUS_M3504YA_1002_834C4161"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_834C4161.icm"
+       id="color-profile5" />
+    <color-profile
+       name="ASUS_M3504YA_1002_834C4161_CMDEF"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_834C4161_CMDEF.icm"
+       id="color-profile6" />
+    <color-profile
+       name="ASUS_M3504YA_1002_834C4180"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_834C4180.icm"
+       id="color-profile7" />
+    <color-profile
+       name="ASUS_M3504YA_1002_834C4180_CMDEF"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_834C4180_CMDEF.icm"
+       id="color-profile8" />
+    <color-profile
+       name="ASUS_M3504YA_1002_AE0D15E7"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_AE0D15E7.icm"
+       id="color-profile9" />
+    <color-profile
+       name="ASUS_M3504YA_1002_AE0D15F5"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_AE0D15F5.icm"
+       id="color-profile10" />
+    <color-profile
+       name="ASUS_M3504YA_1002_E50909CC"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_E50909CC.icm"
+       id="color-profile11" />
+    <color-profile
+       name="ASUS_M3504YA_1002_E5090B59"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_E5090B59.icm"
+       id="color-profile12" />
+    <color-profile
+       name="ASUS_M3504YA_1002_E5090C02"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_E5090C02.icm"
+       id="color-profile13" />
+    <color-profile
+       name="ASUS_M3604YA_1002_834C415D"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3604YA_1002_834C415D.icm"
+       id="color-profile15" />
+    <color-profile
+       name="ASUS_M3504YA_1002_E5090C02"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_E5090C02.icm"
+       id="color-profile17" />
+    <color-profile
+       name="ASUS_M3504YA_1002_E5090B59"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_E5090B59.icm"
+       id="color-profile19" />
+    <color-profile
+       name="ASUS_M3504YA_1002_E50909CC"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_E50909CC.icm"
+       id="color-profile21" />
+    <color-profile
+       name="ASUS_M3504YA_1002_AE0D15F5"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_AE0D15F5.icm"
+       id="color-profile23" />
+    <color-profile
+       name="ASUS_M3504YA_1002_AE0D15E7"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_AE0D15E7.icm"
+       id="color-profile25" />
+    <color-profile
+       name="ASUS_M3504YA_1002_834C4180_CMDEF"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_834C4180_CMDEF.icm"
+       id="color-profile27" />
+    <color-profile
+       name="ASUS_M3504YA_1002_834C4180"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_834C4180.icm"
+       id="color-profile29" />
+    <color-profile
+       name="ASUS_M3504YA_1002_834C4161_CMDEF"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_834C4161_CMDEF.icm"
+       id="color-profile31" />
+    <color-profile
+       name="ASUS_M3504YA_1002_834C4161"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/M3504YA_1002_834C4161.icm"
+       id="color-profile33" />
+    <color-profile
+       name="ASUS_sRGB"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/ASUS_sRGB.icm"
+       id="color-profile35" />
+    <color-profile
+       name="ASUS_DisplayP3"
+       xlink:href="../../../../WINDOWS/system32/spool/drivers/color/AsusICM/ASUS_DisplayP3.icm"
+       id="color-profile37" />
+  </defs>
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-5.6820182,-9.8700334)">
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.563688;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 195.97907,188.44715 v -3.556 H 185.54905 175.11907 V 136.64782 88.404472 h 10.42998 10.43002 v -3.516642 -3.5166 l 26.69855,3.512717 c 14.68424,1.931966 27.0302,3.51445 27.43547,3.516599 l 0.73692,0.004 v 48.243354 48.24337 h -0.68445 c -0.37637,0 -12.6049,1.60021 -27.17443,3.55603 -14.56951,1.95579 -26.60748,3.556 -26.75106,3.556 -0.1852,0 -0.26091,-1.03214 -0.26091,-3.556 z m 0,-51.79933 V 92.908754 h -8.38934 -8.38937 v 43.739066 43.73901 h 8.38937 8.38934 z"
+       id="path34" />
+  </g>
+</svg>
