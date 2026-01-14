@@ -1,0 +1,896 @@
+[gd_scene load_steps=35 format=3 uid="uid://o0hrcwfcvhfp"]
+
+[ext_resource type="Script" path="res://scripts/wwtbam/main_game.gd" id="1_8cg4m"]
+[ext_resource type="AudioStream" uid="uid://s0ng004wb1xx" path="res://audio/hello-new-punter-2008-short.mp3" id="1_njn5i"]
+[ext_resource type="Script" path="res://scripts/wwtbam/camera_2d.gd" id="2_rm4fw"]
+[ext_resource type="AudioStream" uid="uid://nu0i3e0hlkyf" path="res://audio/q1-5-bed-2008.mp3" id="2_wturb"]
+[ext_resource type="Script" path="res://scripts/wwtbam/background_sound.gd" id="3_7hgwq"]
+[ext_resource type="AudioStream" uid="uid://dqrwo0dyofg05" path="res://audio/khsm_50-50.mp3" id="6_281c4"]
+[ext_resource type="AudioStream" uid="uid://dy3gnncccb0qc" path="res://audio/khsm_q1-5-wrong.mp3" id="7_qbd1y"]
+[ext_resource type="Script" path="res://scripts/wwtbam/amount.gd" id="7_u7661"]
+[ext_resource type="AudioStream" uid="uid://d28oxupbvoee5" path="res://audio/khsm_q1-5-correct-o.mp3" id="8_4xnfv"]
+[ext_resource type="Texture2D" uid="uid://n1etxb64xrwf" path="res://sprites/designer_arts/option_final.svg" id="10_2800u"]
+[ext_resource type="Texture2D" uid="uid://cpmn8j6mejtq6" path="res://sprites/ilyfa toys/option_white.svg" id="10_cu2yi"]
+[ext_resource type="FontFile" uid="uid://dj1ssecemx0dx" path="res://fonts/Arsenal-Bold.ttf" id="11_u3g0a"]
+[ext_resource type="Texture2D" uid="uid://cct1l0o8m4x13" path="res://sprites/designer_arts/question_final.svg" id="12_ue1s6"]
+[ext_resource type="FontFile" uid="uid://wyqawfli0ko1" path="res://fonts/Insight Sans SSi.ttf" id="13_fvp2g"]
+[ext_resource type="Script" path="res://scripts/start/start.gd" id="14_7hduf"]
+[ext_resource type="FontFile" uid="uid://c18qj648br7s" path="res://fonts/RussoOne-Regular.ttf" id="14_fvl46"]
+[ext_resource type="Texture2D" uid="uid://bglrbka224qgu" path="res://sprites/designer_arts/кнопка - не нажато.png" id="17_eivdc"]
+[ext_resource type="Texture2D" uid="uid://dh1ct2fiwewct" path="res://sprites/ilyfa toys/door.svg" id="17_jn3u4"]
+[ext_resource type="Texture2D" uid="uid://x75fgtopt1d7" path="res://sprites/designer_arts/кнопка - нажато 1.png" id="18_khqfq"]
+[ext_resource type="Texture2D" uid="uid://dlijm4k80ug4l" path="res://sprites/ilyfa toys/stage_white.svg" id="19_fk54j"]
+[ext_resource type="Texture2D" uid="uid://dwr5tmjssfcu5" path="res://sprites/new design/money_in_progress.svg" id="20_jio4w"]
+[ext_resource type="Script" path="res://scripts/wwtbam/stages.gd" id="22_6ptv8"]
+[ext_resource type="Texture2D" uid="uid://b6fqc2r3hngd1" path="res://sprites/designer_arts/for_money_final.svg" id="22_xreej"]
+[ext_resource type="Texture2D" uid="uid://djy1vm0ax2gr" path="res://sprites/designer_arts/зеленая планета .png" id="24_42j47"]
+[ext_resource type="Script" path="res://scripts/start/зеленая_планета.gd" id="25_c5eys"]
+[ext_resource type="Texture2D" uid="uid://d35popwqysic7" path="res://sprites/designer_arts/круги.png" id="26_bgyx7"]
+[ext_resource type="Texture2D" uid="uid://dk6472e2vkyyr" path="res://sprites/designer_arts/чёрная планета.png" id="27_kfg7a"]
+[ext_resource type="FontFile" uid="uid://b6gjhnkulfnmy" path="res://fonts/crashc.otf" id="28_dgrxo"]
+[ext_resource type="Script" path="res://scripts/start/exit.gd" id="28_n7ykf"]
+[ext_resource type="Texture2D" uid="uid://b58hatjhq53hv" path="res://sprites/designer_arts/верхние листья.png" id="29_414pf"]
+[ext_resource type="Texture2D" uid="uid://dpj4n8kp4pfeo" path="res://sprites/designer_arts/нижнийе листья.png" id="30_xq6t0"]
+
+[sub_resource type="Animation" id="Animation_1am8d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("sounds/choice:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("sounds/background sound:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("Answers/White:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0, 0.521569)]
+}
+
+[sub_resource type="Animation" id="Animation_dm6i7"]
+resource_name = "option1choice"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sounds/choice:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sounds/background sound:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Answers/White:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0, 0.521569)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pb4j3"]
+_data = {
+"RESET": SubResource("Animation_1am8d"),
+"option1choice": SubResource("Animation_dm6i7")
+}
+
+[node name="WWTBAM" type="Node2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_8cg4m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(0.25, 0.25)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("2_rm4fw")
+
+[node name="sounds" type="Node" parent="."]
+
+[node name="startup sound" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("1_njn5i")
+volume_db = -3.709
+pitch_scale = 1.11
+autoplay = true
+
+[node name="background sound" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("2_wturb")
+volume_db = -1.502
+pitch_scale = 1.11
+script = ExtResource("3_7hgwq")
+
+[node name="choice" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("6_281c4")
+
+[node name="wrong" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("7_qbd1y")
+
+[node name="right" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("8_4xnfv")
+
+[node name="Answers" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -6.0
+offset_bottom = -6.0
+metadata/_edit_use_anchors_ = true
+
+[node name="White" type="Sprite2D" parent="Answers"]
+self_modulate = Color(1, 1, 0, 0.521569)
+z_index = 1
+position = Vector2(861, 360.75)
+scale = Vector2(0.993914, 0.985988)
+texture = ExtResource("10_cu2yi")
+
+[node name="White2" type="Sprite2D" parent="Answers"]
+self_modulate = Color(1, 1, 0, 0.521569)
+z_index = 1
+position = Vector2(1458, -850)
+scale = Vector2(0.994, 0.979)
+texture = ExtResource("10_cu2yi")
+
+[node name="option1" type="TextureButton" parent="Answers"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 537.0
+offset_right = 548.0
+offset_bottom = 642.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("10_2800u")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Answers/option1"]
+z_index = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 515.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
+theme_override_fonts/font = ExtResource("11_u3g0a")
+theme_override_font_sizes/font_size = 18
+text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvhvhvjASVDJHSAVDJASHVDvhvhv
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="option2" type="TextureButton" parent="Answers"]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 537.75
+offset_right = 1130.0
+offset_bottom = 647.75
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("10_2800u")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Answers/option2"]
+z_index = 6
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.5
+offset_right = 514.0
+offset_bottom = 101.5
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
+theme_override_fonts/font = ExtResource("11_u3g0a")
+theme_override_font_sizes/font_size = 18
+text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="option3" type="TextureButton" parent="Answers"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 422.0
+offset_right = 548.0
+offset_bottom = 527.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("10_2800u")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Answers/option3"]
+z_index = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 5.75
+offset_right = 515.0
+offset_bottom = 100.75
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
+theme_override_fonts/font = ExtResource("11_u3g0a")
+theme_override_font_sizes/font_size = 18
+text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="option4" type="TextureButton" parent="Answers"]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 420.75
+offset_right = 1130.0
+offset_bottom = 530.75
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("10_2800u")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Answers/option4"]
+z_index = 6
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.5
+offset_right = 513.0
+offset_bottom = 100.5
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
+theme_override_fonts/font = ExtResource("11_u3g0a")
+theme_override_font_sizes/font_size = 18
+text = "VCVDSvsdavsjvdjvJDJVSDJHAVSDvjhvhvhvjASVDJHSAVDJASHVDvhvhv
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Question" type="Node2D" parent="."]
+
+[node name="Question_sprite" type="Sprite2D" parent="Question"]
+position = Vector2(579, 273.25)
+scale = Vector2(1.01848, 1.01809)
+texture = ExtResource("12_ue1s6")
+
+[node name="Question label" type="Label" parent="Question"]
+offset_left = 54.75
+offset_top = 161.25
+offset_right = 1102.75
+offset_bottom = 389.25
+theme_override_colors/font_color = Color(0.380392, 0.537255, 0.188235, 1)
+theme_override_fonts/font = ExtResource("11_u3g0a")
+theme_override_font_sizes/font_size = 18
+text = "WABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUBWABALABADUB DUB DUB"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Help" type="Node2D" parent="."]
+
+[node name="Money" type="Node2D" parent="."]
+
+[node name="amount" type="Label" parent="Money"]
+self_modulate = Color(0.423529, 0.568627, 0.243137, 1)
+offset_left = 950.0
+offset_top = 48.0
+offset_right = 1110.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("13_fvp2g")
+theme_override_font_sizes/font_size = 24
+text = "0 Br"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("7_u7661")
+metadata/_edit_use_anchors_ = true
+
+[node name="take money" type="TextureButton" parent="Money"]
+offset_left = -32.0
+offset_top = -12.0
+offset_right = 1050.0
+offset_bottom = 676.0
+scale = Vector2(0.15, 0.15)
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("17_jn3u4")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Money"]
+offset_left = 48.0
+offset_top = 100.0
+offset_right = 129.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("14_fvl46")
+theme_override_font_sizes/font_size = 18
+text = "Забрать "
+metadata/_edit_use_anchors_ = true
+
+[node name="ForMoney" type="Sprite2D" parent="Money"]
+show_behind_parent = true
+position = Vector2(1144, 74)
+texture = ExtResource("22_xreej")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+deterministic = true
+libraries = {
+"": SubResource("AnimationLibrary_pb4j3")
+}
+
+[node name="Progress bar" type="Node2D" parent="."]
+position = Vector2(98, 34)
+script = ExtResource("22_6ptv8")
+
+[node name="ForProgressBar" type="Sprite2D" parent="Progress bar"]
+position = Vector2(463, 38)
+scale = Vector2(1.51442, 1)
+texture = ExtResource("22_xreej")
+
+[node name="Sec1" type="Node2D" parent="Progress bar"]
+position = Vector2(-86, 0)
+
+[node name="subsec1" type="Sprite2D" parent="Progress bar/Sec1"]
+self_modulate = Color(0, 0, 1, 1)
+position = Vector2(264, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec2" type="Sprite2D" parent="Progress bar/Sec1"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(288, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec3" type="Sprite2D" parent="Progress bar/Sec1"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(312, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec4" type="Sprite2D" parent="Progress bar/Sec1"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(336, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec5" type="Sprite2D" parent="Progress bar/Sec1"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(360, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="Sec2" type="Node2D" parent="Progress bar"]
+position = Vector2(152, 0)
+
+[node name="subsec1" type="Sprite2D" parent="Progress bar/Sec2"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(264, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec2" type="Sprite2D" parent="Progress bar/Sec2"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(288, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec3" type="Sprite2D" parent="Progress bar/Sec2"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(312, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec4" type="Sprite2D" parent="Progress bar/Sec2"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(336, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec5" type="Sprite2D" parent="Progress bar/Sec2"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(360, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="Sec3" type="Node2D" parent="Progress bar"]
+position = Vector2(388, 0)
+
+[node name="subsec1" type="Sprite2D" parent="Progress bar/Sec3"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(264, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec2" type="Sprite2D" parent="Progress bar/Sec3"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(288, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec3" type="Sprite2D" parent="Progress bar/Sec3"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(312, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec4" type="Sprite2D" parent="Progress bar/Sec3"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(336, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="subsec5" type="Sprite2D" parent="Progress bar/Sec3"]
+self_modulate = Color(0.544974, 0.544974, 0.544974, 1)
+position = Vector2(360, 40)
+texture = ExtResource("19_fk54j")
+
+[node name="MoneyInProgress2" type="Sprite2D" parent="Progress bar"]
+position = Vector2(581.75, 38)
+scale = Vector2(0.969927, 0.969927)
+texture = ExtResource("20_jio4w")
+
+[node name="Label" type="Label" parent="Progress bar/MoneyInProgress2"]
+offset_left = -33.3198
+offset_top = -8.0
+offset_right = 36.6802
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
+theme_override_fonts/font = ExtResource("13_fvp2g")
+theme_override_font_sizes/font_size = 20
+text = "32000"
+horizontal_alignment = 1
+
+[node name="MoneyInProgress" type="Sprite2D" parent="Progress bar"]
+position = Vector2(344.75, 38)
+scale = Vector2(0.984848, 0.984848)
+texture = ExtResource("20_jio4w")
+
+[node name="Label" type="Label" parent="Progress bar/MoneyInProgress"]
+offset_left = -25.1308
+offset_top = -8.37692
+offset_right = 25.8692
+offset_bottom = 14.6231
+theme_override_colors/font_color = Color(0.462745, 0.6, 0.298039, 1)
+theme_override_fonts/font = ExtResource("13_fvp2g")
+theme_override_font_sizes/font_size = 20
+text = "1000"
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="."]
+offset_right = 1175.0
+offset_bottom = 648.0
+mouse_filter = 2
+border_width = 5.0
+metadata/_edit_lock_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="ReferenceRect2"]
+z_index = -11
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.380392, 0.537255, 0.188235, 1)
+metadata/_edit_lock_ = true
+
+[node name="EndGame" type="Node2D" parent="."]
+
+[node name="Good" type="Node2D" parent="EndGame"]
+visible = false
+
+[node name="ReferenceRect" type="ReferenceRect" parent="EndGame/Good"]
+offset_left = -1178.0
+offset_bottom = 648.0
+mouse_filter = 2
+border_width = 5.0
+
+[node name="ColorRect" type="ColorRect" parent="EndGame/Good/ReferenceRect"]
+z_index = -11
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.380392, 0.537255, 0.188235, 1)
+metadata/_edit_lock_ = true
+
+[node name="center" type="Container" parent="EndGame/Good/ReferenceRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -20.0
+offset_right = 2.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="ЗеленаяПланета" type="Sprite2D" parent="EndGame/Good/ReferenceRect/center"]
+position = Vector2(17, 0)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("24_42j47")
+script = ExtResource("25_c5eys")
+
+[node name="Круги" type="Sprite2D" parent="EndGame/Good/ReferenceRect/center"]
+position = Vector2(6.5, 0)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("26_bgyx7")
+
+[node name="endgame" type="Node2D" parent="EndGame/Good"]
+
+[node name="Temporary bg" type="Sprite2D" parent="EndGame/Good/endgame"]
+position = Vector2(-600, 324)
+scale = Vector2(115.2, 64.8)
+metadata/_edit_lock_ = true
+
+[node name="start" type="TextureButton" parent="EndGame/Good/endgame"]
+offset_left = -801.75
+offset_top = 488.0
+offset_right = 559.25
+offset_bottom = 826.0
+scale = Vector2(0.3, 0.3)
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("17_eivdc")
+texture_pressed = ExtResource("18_khqfq")
+texture_hover = ExtResource("17_eivdc")
+texture_focused = ExtResource("18_khqfq")
+stretch_mode = 0
+script = ExtResource("14_7hduf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="EndGame/Good/endgame/start"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.380392, 0.537255, 0.188235, 1)
+theme_override_fonts/font = ExtResource("14_fvl46")
+theme_override_font_sizes/font_size = 80
+text = "Играть еще?"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="end_screen" type="Node2D" parent="EndGame/Good/endgame"]
+position = Vector2(-1175, 0)
+
+[node name="end_label" type="Label" parent="EndGame/Good/endgame/end_screen"]
+offset_left = 55.0
+offset_top = 142.0
+offset_right = 1103.0
+offset_bottom = 369.0
+theme_override_fonts/font = ExtResource("11_u3g0a")
+theme_override_font_sizes/font_size = 32
+text = "Поздравляем вам с окончанием игры.
+
+Вы выиграли {} Денег"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Bad" type="Node2D" parent="EndGame"]
+
+[node name="ReferenceRect" type="ReferenceRect" parent="EndGame/Bad"]
+offset_left = -1178.0
+offset_bottom = 648.0
+mouse_filter = 2
+border_width = 5.0
+
+[node name="ColorRect" type="ColorRect" parent="EndGame/Bad/ReferenceRect"]
+z_index = -11
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.133333, 0.14902, 0.160784, 1)
+metadata/_edit_lock_ = true
+
+[node name="center" type="Container" parent="EndGame/Bad/ReferenceRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -20.0
+offset_right = 2.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="ЗеленаяПланета" type="Sprite2D" parent="EndGame/Bad/ReferenceRect/center"]
+position = Vector2(17, 0)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("27_kfg7a")
+script = ExtResource("25_c5eys")
+
+[node name="endgame" type="Node2D" parent="EndGame/Bad"]
+
+[node name="Temporary bg" type="Sprite2D" parent="EndGame/Bad/endgame"]
+position = Vector2(-600, 324)
+scale = Vector2(115.2, 64.8)
+metadata/_edit_lock_ = true
+
+[node name="start" type="TextureButton" parent="EndGame/Bad/endgame"]
+self_modulate = Color(0, 0, 0, 0.304)
+offset_left = -890.01
+offset_top = 542.75
+offset_right = 470.99
+offset_bottom = 880.75
+scale = Vector2(0.2, 0.2)
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("17_eivdc")
+texture_pressed = ExtResource("18_khqfq")
+texture_hover = ExtResource("17_eivdc")
+texture_focused = ExtResource("18_khqfq")
+stretch_mode = 0
+script = ExtResource("14_7hduf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="EndGame/Bad/endgame/start"]
+self_modulate = Color(89.73, 86.486, 87.027, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.380392, 0.537255, 0.188235, 1)
+theme_override_fonts/font = ExtResource("14_fvl46")
+theme_override_font_sizes/font_size = 96
+text = "Играть еще?"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="exit" type="TextureButton" parent="EndGame/Bad/endgame"]
+self_modulate = Color(0, 0, 0, 0.304)
+offset_left = -564.005
+offset_top = 542.75
+offset_right = 796.995
+offset_bottom = 880.75
+scale = Vector2(0.2, 0.2)
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("17_eivdc")
+texture_pressed = ExtResource("18_khqfq")
+texture_hover = ExtResource("17_eivdc")
+texture_focused = ExtResource("18_khqfq")
+stretch_mode = 0
+script = ExtResource("28_n7ykf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="EndGame/Bad/endgame/exit"]
+self_modulate = Color(89.73, 86.486, 87.027, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.380392, 0.537255, 0.188235, 1)
+theme_override_fonts/font = ExtResource("14_fvl46")
+theme_override_font_sizes/font_size = 96
+text = "Выйти"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="end_screen" type="Node2D" parent="EndGame/Bad/endgame"]
+position = Vector2(-1175, 0)
+
+[node name="Label" type="Label" parent="EndGame/Bad/endgame/end_screen"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.728
+offset_left = 189.0
+offset_top = 204.0
+offset_right = 967.0
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("28_dgrxo")
+theme_override_font_sizes/font_size = 96
+text = "Игра окончена"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="EndGame/Bad/endgame/end_screen"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.272
+anchor_right = 0.5
+anchor_bottom = 0.728
+offset_left = 206.0
+offset_top = 312.0
+offset_right = 970.0
+offset_bottom = 378.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_u3g0a")
+theme_override_font_sizes/font_size = 40
+text = "Попробуйте ещё раз"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Best" type="Node2D" parent="EndGame"]
+visible = false
+
+[node name="ReferenceRect" type="ReferenceRect" parent="EndGame/Best"]
+offset_left = -1178.0
+offset_bottom = 648.0
+mouse_filter = 2
+border_width = 5.0
+
+[node name="ColorRect" type="ColorRect" parent="EndGame/Best/ReferenceRect"]
+z_index = -11
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.380392, 0.537255, 0.188235, 1)
+metadata/_edit_lock_ = true
+
+[node name="center" type="Container" parent="EndGame/Best/ReferenceRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -20.0
+offset_right = 2.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="ЗеленаяПланета" type="Sprite2D" parent="EndGame/Best/ReferenceRect/center"]
+position = Vector2(17, 0)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("24_42j47")
+script = ExtResource("25_c5eys")
+
+[node name="left_top" type="Container" parent="EndGame/Best/ReferenceRect"]
+layout_mode = 0
+
+[node name="top_list" type="Sprite2D" parent="EndGame/Best/ReferenceRect/left_top"]
+z_index = 1
+position = Vector2(352, 120)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("29_414pf")
+
+[node name="right_bot" type="Container" parent="EndGame/Best/ReferenceRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -688.0
+offset_right = -40.0
+offset_bottom = -688.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="bottom_list" type="Sprite2D" parent="EndGame/Best/ReferenceRect/right_bot"]
+z_index = 1
+position = Vector2(-373.25, 557.75)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("30_xq6t0")
+
+[node name="endgame" type="Node2D" parent="EndGame/Best"]
+
+[node name="Temporary bg" type="Sprite2D" parent="EndGame/Best/endgame"]
+position = Vector2(-600, 324)
+scale = Vector2(115.2, 64.8)
+metadata/_edit_lock_ = true
+
+[node name="end_screen" type="Node2D" parent="EndGame/Best/endgame"]
+position = Vector2(-1175, 0)
+
+[node name="Label" type="Label" parent="EndGame/Best/endgame/end_screen"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.728
+offset_left = 189.0
+offset_top = 204.0
+offset_right = 967.0
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("28_dgrxo")
+theme_override_font_sizes/font_size = 96
+text = "Спасибо за игру"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="EndGame/Best/endgame/end_screen"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.272
+anchor_right = 0.5
+anchor_bottom = 0.728
+offset_left = 142.5
+offset_top = 292.5
+offset_right = 1016.5
+offset_bottom = 397.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_u3g0a")
+theme_override_font_sizes/font_size = 40
+text = "Вы молодец!
+Мы вместе сможем сделать нашу планету лучше!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="finished" from="sounds/startup sound" to="sounds/background sound" method="_on_startup_sound_finished"]
+[connection signal="button_up" from="Answers/option1" to="." method="_on_option_1_button_up"]
+[connection signal="button_up" from="Answers/option2" to="." method="_on_option_2_button_up"]
+[connection signal="button_up" from="Answers/option3" to="." method="_on_option_3_button_up"]
+[connection signal="button_up" from="Answers/option4" to="." method="_on_option_4_button_up"]
+[connection signal="button_up" from="Money/take money" to="." method="_on_take_money_button_up"]
+[connection signal="button_up" from="EndGame/Good/endgame/start" to="EndGame/Good/endgame/start" method="_on_button_up"]
+[connection signal="button_up" from="EndGame/Bad/endgame/start" to="EndGame/Bad/endgame/start" method="_on_button_up"]
+[connection signal="button_up" from="EndGame/Bad/endgame/exit" to="EndGame/Bad/endgame/exit" method="_on_button_up"]

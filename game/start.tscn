@@ -1,0 +1,318 @@
+[gd_scene load_steps=23 format=3 uid="uid://cp5pouep4ov0l"]
+
+[ext_resource type="FontFile" uid="uid://1v3etm8to5eh" path="res://fonts/PressStart2P-Regular.ttf" id="2_88jc1"]
+[ext_resource type="Script" path="res://scripts/start/start.gd" id="2_j17x2"]
+[ext_resource type="Script" path="res://scripts/start/exit.gd" id="3_sbu3e"]
+[ext_resource type="Script" path="res://scripts/start/animation_player.gd" id="5_htksb"]
+[ext_resource type="Script" path="res://scripts/start/fs_button.gd" id="7_bh2q0"]
+[ext_resource type="Script" path="res://scripts/start/camera.gd" id="7_hh4lx"]
+[ext_resource type="Texture2D" uid="uid://dpj4n8kp4pfeo" path="res://sprites/designer_arts/нижнийе листья.png" id="7_mlcwa"]
+[ext_resource type="Texture2D" uid="uid://b58hatjhq53hv" path="res://sprites/designer_arts/верхние листья.png" id="8_ars5q"]
+[ext_resource type="Texture2D" uid="uid://cytkvji38cyu3" path="res://sprites/designer_arts/правая абстракция.png" id="8_sochh"]
+[ext_resource type="Texture2D" uid="uid://de8f388jjpwjk" path="res://sprites/ilyfa toys/back.png" id="9_y0qfp"]
+[ext_resource type="Texture2D" uid="uid://djy1vm0ax2gr" path="res://sprites/designer_arts/зеленая планета .png" id="10_8siue"]
+[ext_resource type="Texture2D" uid="uid://dli3acllj2bkh" path="res://sprites/designer_arts/левая абстракция.png" id="10_oyi3j"]
+[ext_resource type="Texture2D" uid="uid://cwux8c6mh2w35" path="res://sprites/ilyfa toys/pluspsd.png" id="10_soodu"]
+[ext_resource type="Script" path="res://scripts/start/зеленая_планета.gd" id="11_4yq21"]
+[ext_resource type="Texture2D" uid="uid://bglrbka224qgu" path="res://sprites/designer_arts/кнопка - не нажато.png" id="11_ydf0p"]
+[ext_resource type="FontFile" uid="uid://b6gjhnkulfnmy" path="res://fonts/crashc.otf" id="12_5hfmc"]
+[ext_resource type="Texture2D" uid="uid://x75fgtopt1d7" path="res://sprites/designer_arts/кнопка - нажато 1.png" id="13_oxv2c"]
+[ext_resource type="Texture2D" uid="uid://d35popwqysic7" path="res://sprites/designer_arts/круги.png" id="16_bv4vm"]
+[ext_resource type="FontFile" uid="uid://dj1ssecemx0dx" path="res://fonts/Arsenal-Bold.ttf" id="18_ulm3v"]
+
+[sub_resource type="Animation" id="Animation_x6u8h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemList:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p5ml1"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemList:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667, 1.5, 2, 2.5, 3, 3.53333, 4.03333, 4.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(9, -4), Vector2(-10, -8), Vector2(3, -4), Vector2(-13, -2), Vector2(11, -9), Vector2(-5, -10), Vector2(17, -8), Vector2(0, -7)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6o504"]
+_data = {
+"RESET": SubResource("Animation_x6u8h"),
+"new_animation": SubResource("Animation_p5ml1")
+}
+
+[node name="start_menu" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("")
+libraries = {
+"": SubResource("AnimationLibrary_6o504")
+}
+speed_scale = 0.2
+script = ExtResource("5_htksb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+position_smoothing_enabled = true
+script = ExtResource("7_hh4lx")
+
+[node name="settings" type="Node2D" parent="."]
+
+[node name="back" type="TextureButton" parent="settings"]
+offset_left = -520.0
+offset_top = 448.0
+offset_right = -360.0
+offset_bottom = 600.0
+action_mode = 0
+button_mask = 3
+stretch_mode = 0
+
+[node name="fs_text" type="Label" parent="settings"]
+offset_left = -1260.0
+offset_top = 65.0
+offset_right = -780.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("2_88jc1")
+theme_override_font_sizes/font_size = 40
+text = "Полный Экран"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fs_button" type="TextureButton" parent="settings"]
+offset_left = -1272.0
+offset_top = 88.0
+offset_right = -760.0
+offset_bottom = 600.0
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("10_soodu")
+stretch_mode = 0
+script = ExtResource("7_bh2q0")
+
+[node name="Back" type="Sprite2D" parent="settings"]
+position = Vector2(-440, 520)
+scale = Vector2(0.390625, 0.390625)
+texture = ExtResource("9_y0qfp")
+
+[node name="UI_canvas" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="UI" type="Control" parent="UI_canvas"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="right_bot" type="Container" parent="UI_canvas/UI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="bottom_list" type="Sprite2D" parent="UI_canvas/UI/right_bot"]
+z_index = 1
+position = Vector2(-352, -88)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("7_mlcwa")
+
+[node name="ПраваяАбстракция" type="Sprite2D" parent="UI_canvas/UI/right_bot"]
+position = Vector2(-475, -305)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("8_sochh")
+flip_v = true
+
+[node name="left_top" type="Container" parent="UI_canvas/UI"]
+layout_mode = 1
+
+[node name="top_list" type="Sprite2D" parent="UI_canvas/UI/left_top"]
+z_index = 1
+position = Vector2(352, 120)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("8_ars5q")
+
+[node name="ЛеваяАбстракция" type="Sprite2D" parent="UI_canvas/UI/left_top"]
+position = Vector2(513, 343)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("10_oyi3j")
+flip_v = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI_canvas/UI"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 374.0
+offset_right = 1593.0
+offset_bottom = 1058.0
+scale = Vector2(0.15, 0.15)
+
+[node name="Container" type="Container" parent="UI_canvas/UI/VBoxContainer"]
+layout_mode = 2
+
+[node name="start" type="TextureButton" parent="UI_canvas/UI/VBoxContainer"]
+z_index = 3
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("11_ydf0p")
+texture_pressed = ExtResource("13_oxv2c")
+texture_hover = ExtResource("13_oxv2c")
+texture_disabled = ExtResource("13_oxv2c")
+texture_focused = ExtResource("13_oxv2c")
+stretch_mode = 0
+script = ExtResource("2_j17x2")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="UI_canvas/UI/VBoxContainer/start"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.423529, 0.568627, 0.243137, 1)
+theme_override_fonts/font = ExtResource("18_ulm3v")
+theme_override_font_sizes/font_size = 180
+text = "Играть"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exit" type="TextureButton" parent="UI_canvas/UI/VBoxContainer"]
+z_index = 3
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+action_mode = 0
+button_mask = 3
+texture_normal = ExtResource("11_ydf0p")
+texture_pressed = ExtResource("13_oxv2c")
+texture_hover = ExtResource("13_oxv2c")
+texture_disabled = ExtResource("13_oxv2c")
+texture_focused = ExtResource("13_oxv2c")
+stretch_mode = 0
+script = ExtResource("3_sbu3e")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="UI_canvas/UI/VBoxContainer/exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.423529, 0.568627, 0.243137, 1)
+theme_override_fonts/font = ExtResource("18_ulm3v")
+theme_override_font_sizes/font_size = 180
+text = "Выход
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="center" type="Container" parent="UI_canvas/UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -20.0
+offset_right = 24.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="ЗеленаяПланета" type="Sprite2D" parent="UI_canvas/UI/center"]
+position = Vector2(17, 0)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("10_8siue")
+script = ExtResource("11_4yq21")
+
+[node name="Круги" type="Sprite2D" parent="UI_canvas/UI/center"]
+position = Vector2(6.5, 0)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("16_bv4vm")
+
+[node name="ColorRect" type="ColorRect" parent="UI_canvas/UI"]
+z_index = -6
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.380392, 0.537255, 0.188235, 1)
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="UI_canvas/UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.728
+offset_left = -353.0
+offset_top = -21.5
+offset_right = 425.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_5hfmc")
+theme_override_font_sizes/font_size = 96
+text = "Экологический вызов:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="UI_canvas/UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.272
+anchor_right = 0.5
+anchor_bottom = 0.728
+offset_left = -348.0
+offset_top = -40.256
+offset_right = 416.0
+offset_bottom = 2.74399
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("18_ulm3v")
+theme_override_font_sizes/font_size = 52
+text = "на пути к устойчивому будущему"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_up" from="settings/back" to="Camera2D" method="_on_back_button_up"]
+[connection signal="button_up" from="settings/fs_button" to="settings/fs_button" method="_on_button_up"]
+[connection signal="button_up" from="UI_canvas/UI/VBoxContainer/start" to="UI_canvas/UI/VBoxContainer/start" method="_on_button_up"]
+[connection signal="button_up" from="UI_canvas/UI/VBoxContainer/exit" to="UI_canvas/UI/VBoxContainer/exit" method="_on_button_up"]
